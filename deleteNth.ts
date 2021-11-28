@@ -6,9 +6,6 @@
  */
 
 const deleteNth1 = (arr: Array<number>, n: number) => {
-  if (n === 1) {
-    return [...new Set(arr)];
-  }
   
   let dict = {};
   
@@ -32,9 +29,9 @@ console.log(deleteNth1([1, 1, 3, 3, 7, 2, 2, 2, 2], 3));
 
 const deleteNth2 = (arr: Array<number>, n: number) => {
   var cache = {};
-  return arr.filter((n) => {
-    cache[n] = (cache[n]||0) + 1;
-    return cache[n] <= n;
+  return arr.filter((x) => {
+    cache[x] = (cache[x] || 0) + 1;
+    return cache[x] <= n;
   });
 }
 
