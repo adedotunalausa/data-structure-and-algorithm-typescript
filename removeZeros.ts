@@ -40,15 +40,16 @@ const removeZeros = (array: Array<any>) => {
 console.log(removeZeros([1, "0", 2, 0, 52, "0", 7, 0, "3", 1]));
 
 const removeZerosBeta = (array: Array<any>) => {
-  const head = [];
-  const tail = [];
-  for (const e of array) {
-    if (e === 0 || e === "0") {
-      tail[tail.length] = e;
+  let head = [];
+  let tail = [];
+  for (let item of array) {
+    if (item === 0 || item === "0") {
+      tail[tail.length] = item;
     } else {
-      head[head.length] = e;
+      head[head.length] = item;
     }
   }
+
   return [...head, ...tail];
 };
 
