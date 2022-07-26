@@ -1,5 +1,5 @@
-const reverseSeq1 = (n: number) => {
-  let resultArr = [];
+const reverseSeq1 = (n: number): Array<number> => {
+  let resultArr: Array<number> = [];
 
   for (let i = n; i >= 1; i--) {
     resultArr.push(i);
@@ -11,7 +11,7 @@ const reverseSeq1 = (n: number) => {
 
 console.log(reverseSeq1(10));
 
-const reverseSeq2 = (n: number) => {
+const reverseSeq2 = (n: number): Array<number> => {
   if (n < 2) return [n];
   return [n].concat(reverseSeq2(--n));
 }
